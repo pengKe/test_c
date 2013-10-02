@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{   char *test="haha"; 
+    printf("Hello World!\n");
+    printf("%s",test);
+    return 0;
+}
