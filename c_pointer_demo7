@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main()
+{   
+    int func(double d);
+    int (*func_p)(double);
+    func_p=func;//error
+    func_p(0.5);
+    return 0;
+}
