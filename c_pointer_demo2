@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(void){
+  int p=10;
+  void *h_pp;//=*&p;
+   h_pp=&p;
+   printf("%p   %p\n",h_pp,&p);
+   printf("%d   \n",*(int*)h_pp);
+   return 0;
+}   
