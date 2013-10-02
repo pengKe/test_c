@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(void){
+  int h=5,p=10,*h_p;
+  printf("&h   %p\n",&h);
+  printf("&p   %p\n",&p);
+  printf("&h_p   %p\n",&h_p);
+  h_p=&p;//将p的地址复值给h_p 
+  printf("new &h_p   %p\n",h_p);
+  printf("*h_p   %d\n",*h_p);//输出h_p的值 
+  *h_p=20;//通过h_p修改p的值 
+   printf("*p   %d\n",p);
+}
