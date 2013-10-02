@@ -1,0 +1,10 @@
+#include <stdio.h>
+/**  K&R里的字符复制函数  */
+/**  strcpy:将t复制到s;  */
+void strcpy(char *s,char *t){
+    while(*s++=*t++)
+           ;
+}
+int main(void){
+   return 0;
+} 
