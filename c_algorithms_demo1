@@ -1,0 +1,31 @@
+#include <stdio.h>
+int fibonacci(int n){
+   if(n<2)
+       return n==0?0:1;
+   return     fibonacci(n-1)+fibonacci(n-2);
+}
+int factorial(int n){
+   if(n==1) return 1;
+   else return n*factorial(n-1);
+}
+void print(){
+  char a;
+  scanf("%c",&a);
+  if(a!='#') print();
+  if(a!='#') printf("%c",a);
+}
+int main()
+{   
+  int arr[40],i;
+  arr[0]=0,arr[1]=1;
+  for(i=2;i<40;i++){
+    arr[i]=arr[i-1]+arr[i-2];
+    printf("a[%d] %d\n",i,arr[i]);
+  }
+  printf("a[%d] %d\n",10,fibonacci(10));
+  printf("factorial %d",factorial(5));
+  print();
+  return 0;
+}
+
+
