@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+enum gender{male,female}; 
+typedef enum gender gen;
+typedef struct person{
+   char name[20];
+   enum gender s;
+   int age;
+   double income;
+}person;
+typedef char A[20];
+int main()
+{   
+  A str3="123";//str3类型是char [20] 
+  person a1={"aaa",male,21,21};
+  person a2={name:"aaa2",gender:male,age:21,income:21};//error
+  printf("%g   \n",a1.income);
+  puts(str3);
+  //char a[4]={'A','\0','B'};
+  // printf("%s\n",a+2); 
+  char str[20];
+  char str2[100]="12345678"; 
+  //scanf("%*[^\n]%*c");
+ strcpy(str2,"haha");strcat(str2,"aa");
+  scanf("%s",&str[0]);//读取到空白为止 
+  printf("%d -- %d\n",sizeof(str2),strlen(str2));
+ // gets(str);读取一行 
+  printf("%s  %s\n",str,str2);
+  printf("%c\n","sasf"[2]);
+  printf("%s\n","sasf"+2);
+  //strchr,strrchr,strstr
+  //puts(str);
+  //printf(str);输入内容有格式占位符就会出问题 
+  //"hello"[0]='H';编译错误，给只读位置赋值 
+  {
+  	 char c;
+  	 do 
+  	   scanf("%c",&c);
+  	  while(c!='\n') ;
+  }//清空输入缓冲区 
+  return 0;
+}
