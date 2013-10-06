@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct Goods{
+   char name[18];//18
+   double price;//8
+   int num;//4 
+}gs;
+struct mode{
+  unsigned char userread:1;
+  unsigned char userwrite:1;
+  unsigned char userexecute:1;
+  unsigned char groupread:1;
+  unsigned char groupwrite:1;
+  unsigned char groupexecute:1;
+  unsigned char otherread:1;
+  unsigned char otherwrite:1;
+  unsigned char otherexecute:1;
+};
+typedef union IP{
+   char i4[4];
+   int net;
+   double d;
+}IP;
+//typedef struct Goods gs;
+int main()
+{   
+  struct mode m={1,1,0,1,0,0,1,0,0};//bitfield
+  printf("%d  ---  %d\n",sizeof(gs),sizeof(IP));  
+  IP me={192,168,0,20};//error
+  printf("%x\n",me.net);
+  me.net=0x12345678;
+  int i;
+  for(i=0;i<4;i++)
+  {
+  	printf("%d",me.i4[i]);
+  }
+  return 0;
+}
