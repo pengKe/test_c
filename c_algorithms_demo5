@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <string.h>
+#include <ctype.h>
+#include <assert.h>
+int main()
+{
+    //printf("%lf\n",1+2*sqrt(3)/(5-0.1));
+    int a,b;
+    //scanf("%d%d",&a,&b);
+    //printf("%d %d",a,b);
+    //system("pause");
+    //printf("%c %c",'\\','c');
+    //printf("%lf",clock());
+    char s1[20]="12131";
+	//scanf("%s",s1);
+	char s2[20];
+	//fgets(s2,sizeof(s1),stdin);
+	int ch=2;
+	assert(ch<0);
+	//string s="aaaaaa";
+	//if(isalpha(i))
+//	printf("%c     ",'\'');
+/**	while(scanf("%d",i)==1){
+		printf("ok");		
+	}*/
+/**	while(getchar(s2)!="\n"){
+		printf("%s\n",s2);
+	}*/
+/**	while((ch=getchar())!=EOF){
+		putchar(ch);		
+	}
+	while(fgets(s2,sizeof(s2),stdin)!=NULL){
+		puts(s2);
+	}  */
+	//memset(s1,0,sizeof(s1)); 
+	//sprintf(s2,s1);
+	//if(strcpy(s1,"12345"))
+	  //printf("%d\n",strlen(s2));
+    return 0;
+}
