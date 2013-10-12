@@ -4,6 +4,11 @@
 void print(int * p){
   printf("%d",*p);
 }
+void foreach(int a[],int n,void (*fp)(int*)){
+  int i;
+  for(i=0;i<n;i++)
+     (*fp)(a+i);
+}
 int main()
 {   
   int *a[5];//p是一个数组，5个元素，每个元素是int* 
