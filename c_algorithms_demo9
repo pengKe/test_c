@@ -1,0 +1,25 @@
+ #include <stdio.h>
+ #include <math.h>
+int is_leap_year(int year)
+{
+	if(year%4==0 && year%100!=0 || year%400==0){
+		 printf("%d  is leap_year",year);
+	}else{
+		 printf("%d is not leap_year",year);
+	}	 
+}
+double myround(double x)
+{
+	if(x>=0)
+	{
+	   return	x>=(int)(x)+0.5?ceil(x):floor(x);
+	}else{
+	   return	x>=(int)(x)-0.5?ceil(x):floor(x);
+	}  
+}
+ int main(){
+    is_leap_year(2000);
+    printf("%.0lf",myround(0));
+    return 0;	
+ }
+ 
