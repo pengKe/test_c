@@ -1,0 +1,12 @@
+ #include <stdio.h>
+ #include <math.h>
+ #include <stdlib.h>
+ #include <time.h>
+ #include <string.h>
+int main(){
+	printf("%d,%10d,%-10d,%010d,%+d\n",123,123,123,123,123);
+	printf("%f,%10f,%-10f,%6.2f\n",1.2,1.2,1.2,1.2);	  
+    return 0;
+ }
+//output:123,       123,123       ,0000000123,+123
+//output:1.200000,  1.200000,1.200000  ,  1.20
