@@ -1,0 +1,24 @@
+ #include <stdio.h>
+ #include <math.h>
+ #include <stdlib.h>
+ #include <time.h>
+ //al_basic p70
+ char *s="`1234567890-=qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+ int main(){
+    int i,c;
+	while((c=getchar())!=EOF)
+	{
+		int flag=0; 
+		for(i=0;s[i];i++)
+		{
+		  if(s[i]==c) 
+		  {
+		    putchar(s[i-1]);
+		    flag=1;		    
+		  }
+		}
+		 if(flag==0)
+		 putchar(c);
+	}   
+    return 0;	
+ }
