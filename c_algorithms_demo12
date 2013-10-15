@@ -1,0 +1,15 @@
+ #include <stdio.h>
+ #include <math.h>
+ #include <stdlib.h>
+ #include <time.h>
+ int main(){
+    int c,q=1;
+    while((c=getchar())!=EOF)
+    {
+    	if(c=='"'){
+	    	printf("%c",q?'<':'>');q=!q;
+	    } 
+    	else putchar(c);
+    }
+    return 0;	
+ }
