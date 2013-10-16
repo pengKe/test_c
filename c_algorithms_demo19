@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+void inputArray(int *arr,int len){
+	int i;
+	for(i=0;i<len;i++)
+	  scanf("%d",arr+i);
+}
+int main(){
+   int i,arr2[10];
+   inputArray(arr2,10);
+   for(i=0;i<10;i++)
+       printf("%d ",arr2[i]);
+   printf("\n");	    	
+    return 0;    
+ }
