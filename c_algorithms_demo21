@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+int main(){
+	FILE *fp;
+	char pathName[20],txt1[20]={'\0'},txt2={'\0'};
+	int fileLen;
+	printf("please type the path name of the file\n");
+	scanf("%s",pathName);
+	fp=fopen(pathName,"w");
+	printf("please input a string to this file\n");
+	scanf("%s",txt1);	
+	fileLen=strlen(txt1);
+	fwrite(txt1,fileLen,1,fp);
+	fclose(fp);
+	printf("this file has been saved\n");
+	printf("the content of file :%s\n",pathName);
+	fp=fopen(pathName,"r");
+	fread(txt2,fileLen,1,fp);
+	printf("%s\n",txt2);
+   FILE *myf;
+   long f;
+   myf=fopen("./test.txt","r");
+   fseek(myf,0,SEEK_END);
+   f=ftell(myf);
+   fclose(myf);
+   printf("the length of file is %d bytes\n",f);    	
+    return 0;    
+ }
