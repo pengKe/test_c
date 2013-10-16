@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <dos.h>
+int main(){
+  	clock_t start,end;
+  	start=clock();
+  	_sleep(1);//windows
+  	end=clock();
+  	printf("the time was :%f\n",(end-start)/CLK_TCK);
+    return 0;    
+ }
