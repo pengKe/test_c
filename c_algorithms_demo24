@@ -1,0 +1,22 @@
+#include <stdio.h>
+int findX(int a[]){
+   int k=a[0],i;
+   for(i=1;i<=1000;i++){
+      k ^=a[i] ^ i;
+   }
+   return k;
+}
+//不用任何中间变量，实现strlen
+int strlen(char *str)
+{
+   if(*str==0)
+        return 0;
+   return strlen(str+1)+1;
+}
+int main()
+{   
+    char *s="mysohu";
+    
+    printf("%d \n",strlen(s));
+    return 0;
+}
