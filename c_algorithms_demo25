@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int gcd(int x,int y)
+{
+	return !y?x:gcd(y,x%y);
+}
+int gcd2(int x,int y)
+{
+	if(x<y)
+	   return gcd2(y,x); 
+	if(y==0)
+	   return x;
+    else
+	   return gcd2(x-y,y);   
+}
+int gcd3(int x,int y)
+{
+	if(x<y)
+	  return gcd3(y,x);
+    if(y==0)
+	   return x;
+	else
+	{
+		  if(IsEven(x))//奇树 
+		  { 
+		    if(IsEven(y))
+		       return (gcd3(x>>1,y>>1)<<1);
+            else
+               return gcd3(x>>1,y);
+		  }
+		  else
+		  {
+		  	if(IsEven(y))
+		       return gcd3(x,y>>1);
+            else
+               return gcd3(y,x-y);
+		  }
+	}
+}
+int main()
+{   
+  printf("%d\n",gcd2(16,8));
+  return 0;
+}
+
