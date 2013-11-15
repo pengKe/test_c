@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdarg.h>
+void swap(int a,int b)
+{
+	 printf("&a=%p,&b=%p\n",&a,&b);
+}
+typedef struct date{
+  int year;
+  int month;
+  int day;
+}date;
+int max(int cnt,...)//error
+{
+	va_list v;
+	va_start(v,cnt);
+	int maxvalue = va_arg(v,int);
+	for(int i=1;i<cnt;i++)
+	{
+		int data=va_arg(v,int);
+		if(data>maxvalue)
+		   maxvalue=data;
+	}
+	va_end(v);
+	return maxvalue;
+}
+void input(){
+  printf("d of function input:%p\n",max(2,88,69));
+}
+void printf(date d)
+{
+	printf("%d-%d-%d\n",d.year,d.month,d.day);
+}
+int main()
+{     
+   
+}
