@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+int test1(int n)
+{
+	int count=0;
+	if(n==1)
+	return 1;
+	while(n!=1){
+	   if(n%2==0){
+	   	  n=n/2;
+	   }
+	   else if(n%2==1){
+	   	n=3*n+1;
+	   }	   
+	   count++;
+	}
+	return count+1;
+}
+int main()
+{  
+    int a,b,max=0,i;
+	scanf("%d%d",&a,&b);
+	for(i=a;i<=b;i++)
+	{
+	   if(max<test1(i))
+	    max=test1(i);
+	}
+    printf("\n%d  %d  %d",a,b,max);
+}
