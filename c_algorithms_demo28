@@ -11,15 +11,25 @@ void hannuota(int n,char A,char B,char C){
      hannuota(n-1,B,A,C);
   }
 }
+void f(int *p){
+   *p=-1;
+}
+void show_array(int *p,int n){
+      p[0]=-1;
+}
 int main()
 {  
    int n,*p;
    int i=10;
+   int a[5]={11,2,3,4,5};
    //printf("您要输入的盘子个数：");
    //scanf("%d",&n);
   // hannuota(n,'A','B','C');
    p=&i;
   *p=i;
   printf("p=%d\n",*p);
+   f(&i);
+   show_array(a,5);
+   printf("i=%d,a[0]=%d",i,a[0]);
    return 0;
 }
