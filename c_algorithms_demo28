@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+void hannuota(int n,char A,char B,char C){
+  if(1==n){
+     printf("将编号为%d的盘子直接从%c柱子移到%c柱子\n",n,A,C);
+  }else{
+     hannuota(n-1,A,C,B);
+     printf("将编号为%d的盘子直接从%c柱子移到%c柱子\n",n,A,C);
+     hannuota(n-1,B,A,C);
+  }
+}
+int main()
+{  
+   int n,*p;
+   int i=10;
+   //printf("您要输入的盘子个数：");
+   //scanf("%d",&n);
+  // hannuota(n,'A','B','C');
+   p=&i;
+  *p=i;
+  printf("p=%d\n",*p);
+   return 0;
+}
