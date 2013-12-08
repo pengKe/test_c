@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+int fib_i(int a, int b , int n)
+{
+	    if(n == 3)
+	        return a+b;
+	    else
+	        return fib_i(b, a+b, n-1);
+}
+int factorial_tail(int n,int acc1,int acc2)
+{
+  if (n < 2)
+  {
+	        return acc1;
+  }
+  else
+ {
+	        return factorial_tail(n-1,acc2,acc1+acc2);
+ }
+}
+int main(void){
+ /**   int i, *pa, a[] = {3,4,5,6,7,3,7,4,4,6};
+    pa = a;
+     for (i = 0; i <= 9; i++)
+      {
+    printf("%d\n", *(a+i));
+    pa++; 
+     }
+   printf("%d %x\n", a,&pa);
+   int i, a[] = {3,4,5,6,7,3,7,4,4,6};
+     const int * pa = a; 
+    for (i = 0; i <= 9; i++)
+    {
+        printf("%d\n", *pa);
+        pa++ ; 
+    }
+    int a = 4;
+    int b = 6;
+    int *  px = &a; 
+    int *  py = &b; 
+    int tmp = *px;
+    *px = *py;
+    *py = tmp;
+     printf("*px =%d, *py = %d.\n", *px, *py);
+     */   
+     printf("%d \n",fib_i(1,1,10));
+     return 0;	
+}
