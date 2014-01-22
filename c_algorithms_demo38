@@ -1,0 +1,10 @@
+#include <stdio.h>
+#define n 1024
+int array[n];
+int main()
+{   
+   int i;
+   for(i=0;~scanf("%d",&array[i]);i++)
+     printf("%d ",array[i]);
+   return 0;
+}
